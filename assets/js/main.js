@@ -49,7 +49,7 @@ function scrollActive(){
 /*===== CHANGE COLOR HEADER =====*/ 
 window.onscroll = () => {
     const nav = document.getElementById('header')
-    if(this.scrollY >= 200){
+    if(this.scrollY > 0){
         nav.classList.add('scroll-header')
     } else {
         nav.classList.remove('scroll-header')
@@ -73,3 +73,61 @@ $(function () {
     $("#amount").val("" + $("#slider-range").slider("values", 0) +
         " - " + $("#slider-range").slider("values", 1));
 });
+
+// LOADING
+
+$(function(){
+    function id(v){return document.getElementById(v); }
+    function loadbar() {
+      var ovrl = id("overlay"),
+          prog = id("progress"),
+          stat = id("progstat"),
+          img = document.images,
+          c = 0;
+          tot = img.length;
+  
+      function imgLoaded(){
+        c += 1;
+        var perc = ((100/tot*c) << 0) +"%";
+        prog.style.width = perc;
+        stat.innerHTML = "Loading "+ perc;
+        if(c===tot) return doneLoading();
+      }
+      function doneLoading(){
+        ovrl.style.opacity = 0;
+        setTimeout(function(){ 
+          ovrl.style.display = "none";
+        }, 1200);
+      }
+      for(var i=0; i<tot; i++) {
+        var tImg     = new Image();
+        tImg.onload  = imgLoaded;
+        tImg.onerror = imgLoaded;
+        tImg.src     = img[i].src;
+      }    
+    }
+    document.addEventListener('DOMContentLoaded', loadbar, false);
+  }());
+
+  function changeImage(element) {
+    var main_prodcut_image = document.getElementById('main_product_image');
+    main_prodcut_image.src = element.src;
+  }
+
+// QTY COUNTER
+function increaseCount(a, b) {
+    var input = b.previousElementSibling;
+    var value = parseInt(input.value, 10); 
+    value = isNaN(value)? 0 : value;
+    value ++;
+    input.value = value;
+  }
+  function decreaseCount(a, b) {
+    var input = b.nextElementSibling;
+    var value = parseInt(input.value, 10); 
+    if (value > 1) {
+      value = isNaN(value)? 0 : value;
+      value --;
+      input.value = value;
+    }
+  }

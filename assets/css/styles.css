@@ -80,6 +80,9 @@ a{
   text-decoration: none;
   color: var(--dark-color);
 }
+a:hover{
+  color: var(--dark-color-light);
+}
 
 img{
   max-width: 100%;
@@ -363,7 +366,7 @@ article{
 .goods__pag{
   padding: .7rem 1rem;
   border: 1px solid var(--dark-color);
-  border-radius: 100%;;
+  border-radius: 100%;
 }
 
 .goods__pag:hover{
@@ -759,7 +762,7 @@ article{
   box-shadow: none;
   border: none;
   height: 4px;
-  background: var(--dark-color-light);
+  background: var(--white-color);
   color: var(--dark-color-light);
   border-radius: 0px;
 }
@@ -842,4 +845,197 @@ article{
 .shop-by-price .check-box-list .count {
   margin-left: 5px;
   color: #666;
+}
+
+/* LOADING */
+#overlay{
+  position:fixed;
+  z-index:99999;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+  background:rgba(0,0,0,0.9);
+  transition: 1s 0.4s;
+}
+#progress{
+  height:1px;
+  background:#fff;
+  position:absolute;
+  width:0;
+  top:50%;
+}
+#progstat{
+  font-size:0.7em;
+  letter-spacing: 3px;
+  position:absolute;
+  top:50%;
+  margin-top:-40px;
+  width:100%;
+  text-align:center;
+  color:#fff;
+}
+
+/* DETAIL */
+.detail__card{
+  overflow: hidden;
+  background-color: var(--dark-color-lighten);
+  padding: 2rem;
+  border-radius: 3rem;
+}
+.thumbnail_images ul{
+  list-style: none;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  margin-top:10px
+}
+.thumbnail_images ul li{
+  margin: 5px;
+  padding: 10px;
+  border: 2px solid #eee;
+  cursor: pointer;
+  transition: all 0.5s
+}
+.thumbnail_images ul li:hover{
+  border: 2px solid #000
+}
+.main_image{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  height: 400px;
+  width: 100%;
+  overflow: hidden
+}
+.heart{
+  height: 29px;
+  width: 29px;
+  background-color: #eaeaea;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+.content p{
+  font-size: 12px
+}
+.ratings span{
+  font-size: 14px;
+  margin-left: 12px
+}
+.goods__sizes{
+  margin-top: var(--mb-1);
+}
+
+.goods__size{
+  padding: .7rem 1rem;
+  border: 1px solid var(--dark-color);
+  background: var(--dark-color-lighten)
+}
+
+.goods__size:hover{
+  background-color: var(--dark-color);
+  color: var(--white-color);
+}
+.right-side{
+  position: relative
+}
+.search-option{
+  position: absolute;
+  background-color: #000;
+  overflow: hidden;
+  align-items: center;
+  color: #fff;
+  width: 200px;
+  height: 200px;
+  border-radius: 49% 51% 50% 50% / 68% 69% 31% 32%;
+  left: 30%;
+  bottom: -250px;
+  transition: all 0.5s;
+  cursor: pointer
+}
+.search-option .first-search{
+  position: absolute;
+  top: 20px;
+  left: 90px;
+  font-size: 20px;
+  opacity: 1000
+}
+.search-option .inputs{
+  opacity: 0;
+  transition: all 0.5s ease;
+  transition-delay: 0.5s;
+  position: relative
+}
+.search-option .inputs input{
+  position: absolute;
+  top: 200px;
+  left: 30px;
+  padding-left: 20px;
+  background-color: transparent;
+  width: 300px;
+  border: none;
+  color: #fff;
+  border-bottom: 1px solid #eee;
+  transition: all 0.5s;
+  z-index: 10
+}
+.search-option .inputs input:focus{
+  box-shadow: none;
+  outline: none;
+  z-index: 10
+}.search-option:hover{
+  border-radius: 0px;
+  width: 100%;
+  left: 0px
+}
+.search-option:hover .inputs{
+  opacity: 1
+}.search-option:hover .first-search{
+  left: 27px;
+  top: 25px;
+  font-size: 15px
+}
+.search-option:hover .inputs input{
+  top: 20px
+}
+.search-option .share{
+  position: absolute;
+  right: 20px;
+  top: 22px
+}
+.buttons .btn{
+  height: 50px;
+  width: 150px;
+  border-radius: 0px !important
+}
+
+/* QTY COUNTER */
+.counter {
+  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.counter input {
+  width: 50px;
+  border: 0;
+  line-height: 30px;
+  font-size: 20px;
+  text-align: center;
+  background: var(--dark-color);
+  color: #fff;
+  appearance: none;
+  outline: 0;
+  border-radius: 2rem;
+}
+.counter span {
+  display: block;
+  font-size: 25px;
+  padding: 0 10px;
+  cursor: pointer;
+  color: var(--dark-color);
+  user-select: none;
 }
