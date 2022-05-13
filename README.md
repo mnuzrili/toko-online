@@ -12,3 +12,7 @@ Fitur
 - Produts View
 - Detail Products
 - Cart
+
+# Demo Page
+
+https://mnuzrili.github.io/toko-online/
