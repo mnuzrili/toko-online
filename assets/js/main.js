@@ -109,6 +109,7 @@ $(function(){
     document.addEventListener('DOMContentLoaded', loadbar, false);
   }());
 
+// IMAGE
   function changeImage(element) {
     var main_prodcut_image = document.getElementById('main_product_image');
     main_prodcut_image.src = element.src;
@@ -131,3 +132,23 @@ function increaseCount(a, b) {
       input.value = value;
     }
   }
+
+  // SLICK CAROUSEL
+  const maximg_carousel = 4;
+   
+  let img_carousel = $("#thumbnail li").length;
+
+  if(img_carousel < maximg_carousel) {
+    img_carousel = img_carousel;
+  } else {
+    img_carousel = maximg_carousel;
+  }
+
+  $('.slick-carousel').slick({
+    infinite: true,
+    slidesToShow: img_carousel,
+    slidesToScroll: 1,
+    autoplay: false,
+    centerMode: true,
+    focusOnSelect: true,
+  });

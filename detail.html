@@ -16,6 +16,10 @@
         <!-- ===== BOX ICONS ===== -->
         <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
 
+        <!-- SLICK CAROUSEL -->
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
 
         <title>Responsive Ecommerce Website</title>
     </head>
@@ -30,7 +34,7 @@
         <header class="l-header" id="header">
             <nav class="nav bd-grid">
                 <div class="nav__toggle" id="nav-toggle">
-                    <i class='bx bx-grid-alt'></i>
+                    <a href="./cart.html"><i class='bx bxs-shopping-bag'></a></i>
                 </div>
 
                 <a href="#" class="nav__logo">Logo</a>
@@ -41,7 +45,7 @@
                         <li class="nav__item"><a href="./index.html#featured" class="nav__link">Featured</a></li>
                         <li class="nav__item"><a href="./index.html#women" class="nav__link">Women</a></li>
                         <li class="nav__item"><a href="./index.html#new" class="nav__link">New</a></li>
-                        <li class="nav__item"><a href="#shop" class="nav__link active">Shop</a></li>
+                        <li class="nav__item"><a href="./shop.html" class="nav__link button-shop">Shop</a></li>
                     </ul>
                 </div>
 
@@ -62,12 +66,22 @@
                                 <div class="d-flex flex-column justify-content-center">
                                     <div class="main_image"> <img src="assets/img/new1.png" id="main_product_image" width="350" class="goods__img"> </div>
                                     <div class="thumbnail_images">
-                                        <ul id="thumbnail">
-                                            <li><img onclick="changeImage(this)" src="assets/img/new1.png" width="70"></li>
-                                            <li><img onclick="changeImage(this)" src="assets/img/new2.png" width="70"></li>
-                                            <li><img onclick="changeImage(this)" src="assets/img/new3.png" width="70"></li>
-                                            <li><img onclick="changeImage(this)" src="assets/img/new4.png" width="70"></li>
-                                        </ul>
+                                        <div class="row">
+                                            <div class="col-11">
+                                            <!-- <ul id="thumbnail">
+                                                    <li><img onclick="changeImage(this)" src="assets/img/new1.png" width="70"></li>
+                                                    <li><img onclick="changeImage(this)" src="assets/img/new2.png" width="70"></li>
+                                                    <li><img onclick="changeImage(this)" src="assets/img/new3.png" width="70"></li>
+                                                    <li><img onclick="changeImage(this)" src="assets/img/new4.png" width="70"></li>
+                                            </ul> -->
+                                            <ul id="thumbnail" class="slick-carousel">
+                                                <li><img onclick="changeImage(this)" src="assets/img/new1.png" width="70"></li>
+                                                <li><img onclick="changeImage(this)" src="assets/img/new2.png" width="70"></li>
+                                                <li><img onclick="changeImage(this)" src="assets/img/new3.png" width="70"></li>
+                                                <li><img onclick="changeImage(this)" src="assets/img/new4.png" width="70"></li>
+                                            </ul>
+                                             </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -161,6 +175,9 @@
         <!-- JQUERY -->
         <script src="assets/js/jquery.min.js"></script>
         <script src="assets/js/jquery-ui.min.js"></script>
+
+        <!-- SLICK CAROUSEL -->
+        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
         <!--===== MAIN JS =====-->
         <script src="assets/js/main.js"></script>
