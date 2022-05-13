@@ -1160,7 +1160,7 @@ input:focus::-webkit-input-placeholder
 {
     color:transparent;
 }
-.btn{
+.btn__cart{
   background-color: var(--dark-color);
   border-color: var(--dark-color);
   color: var(--white-color);
@@ -1170,7 +1170,7 @@ input:focus::-webkit-input-placeholder
   padding: 1vh;
   border-radius: 0;
 }
-.btn:focus{
+.btn__cart:focus{
   box-shadow: none;
   outline: none;
   box-shadow: none;
@@ -1179,7 +1179,7 @@ input:focus::-webkit-input-placeholder
   -webkit-user-select: none;
   transition: none; 
 }
-.btn:hover{
+.btn__cart:hover{
   color: var(--white-color);
 }
 a{
