@@ -272,7 +272,7 @@ article{
   display: inline-block;
   background-color: var(--dark-color);
   color: var(--white-color);
-  padding: .125rem 2rem;
+  padding: .125rem 1.5rem;
   font-weight: var(--font-medium);
   border-radius: .5rem;
   transition: .3s;
@@ -653,7 +653,7 @@ article{
   }
 
   .nav__item{
-    margin-left: var(--mb-6);
+    margin-left: var(--mb-4);
     margin-bottom: 0;
   }
 
