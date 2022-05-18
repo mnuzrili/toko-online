@@ -9,7 +9,7 @@
   --font-semi-bold: 700;
   --font-bold: 800;
   
-  /*===== Colores =====*/
+  /*===== Colors =====*/
   --dark-color: #1e293b;
   --dark-color-light: #475569;
   --dark-color-lighten: #94a3b8;
@@ -24,7 +24,7 @@
   --normal-font-size: .938rem;
   --smaller-font-size: .813rem;
   
-  /*===== Margenes =====*/
+  /*===== Margin =====*/
   --mb-1: .5rem;
   --mb-2: 1rem;
   --mb-3: 1.5rem;
@@ -1170,13 +1170,7 @@ select{
 .btn__cart:hover{
   color: var(--white-color);
 }
-a{
-  color: black; 
-}
-a:hover{
-  color: black;
-  text-decoration: none;
-}
+
 #code{
   background-image: linear-gradient(to left, rgba(255, 255, 255, 0.253) , rgba(255, 255, 255, 0.185)), url("https://img.icons8.com/small/16/000000/long-arrow-right.png");
   background-repeat: no-repeat;
